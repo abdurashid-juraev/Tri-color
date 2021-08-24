@@ -1,0 +1,67 @@
+{% set title = "index" %}
+
+{% extends "main.tpl" %}
+
+{% block content %}
+
+{% include "components/header.html" %}
+
+<main>
+  <div class="container-mod">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <div class="block-slide">
+            <div class="swiper-container mySwiper swiper-container-h">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./images/png/Group.png" alt=":("></div>
+                <div class="swiper-slide"><img src="./images/png/Group.png" alt=":("></div>
+                <div class="swiper-slide"><img src="./images/png/Group.png" alt=":("></div>
+              </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="block-info">
+            <div>
+              <h1 class="block-info-title">Установка, продажа
+                и настройка
+                оборудования
+                <span>триколор</span>
+              </h1>
+              <div class="block-info-subtitle">
+                Закажите оборудование сейчас
+                и получите <span>3 ПОДАРКА:</span>
+              </div>
+              <ul class="info-ul">
+                <li class="info-ul-item">Грозозащиту</li>
+                <li class="info-ul-item">Сим-карту с безлимитным интернет тарифом</li>
+                <li class="info-ul-item">Скидку 10% на любую услугу</li>
+              </ul>
+              <a href="#!" class="red-btn">Заказать</a>
+            </div>
+            <div class="card-wrap">
+              <a href="#!" class="block-mini-card">
+                <img src="./images/svg/hd.svg" alt=":(">
+                <div>220 каналов 
+                  в HD качестве </div>
+              </a>
+              <a href="#!" class="block-mini-card">
+                <img src="./images/svg/Деньги.svg" alt=":(">
+                <div>от 100 рублей 
+                  в месяц</div>
+              </a>
+              <a href="#!" class="block-mini-card">
+                <img src="./images/svg/Сигнал.svg" alt=":(">
+                <div>Надежный прием 
+                  в любой точке РФ</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% include "components/footer.html" %}
+{% endblock %}
