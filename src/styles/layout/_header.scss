@@ -6,6 +6,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 1024px) {
+    padding-right: 80px;
+  }
 }
 .logo-wrap {
   position: relative;
@@ -27,7 +30,6 @@
 }
 
 .logo-text {
-  font-weight: normal;
   font-size: 9px;
   line-height: 1.2;
   color: #677074;
@@ -36,9 +38,18 @@
   position: absolute;
   top: 43px;
   left: 55px;
+  @media (max-width: 1024px) {
+    position: static;
+    max-width: 210px;
+    font-size: 14px;
+    text-indent: 0;
+    margin-left: 20px;
+  }
   @media (max-width: 576px) {
     margin-left: 0;
     font-size: 10px;
+    text-indent: 20px;
+    position: absolute;
     top: 25px;
     left: 31px;
   }
@@ -79,6 +90,9 @@
   }
   @media (max-width: 1024px) {
     padding: 30px 0 0 0;
+  }
+  @media (max-width: 576px) {
+    padding: 15px 0 0 0;
   }
 }
 .aktiv {
@@ -226,22 +240,64 @@
   right: 0;
   top: 340px;
   flex-direction: column;
-  padding: 25px 20px 25px 20px;
+  padding: 25px 20px 0 20px;
   background: #ffffff;
   border: 1px solid #004da0;
   border-right: 0;
   border-radius: 5px;
+  @media (max-width: 1024px) {
+    position: static;
+    padding: 0;
+    border: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 30px 0;
+  }
   img {
     margin-bottom: 50px;
+    transition: all 0.3s;
+    @media (max-width: 1024px) {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+    
+    &:hover {
+      transform: scale(1.3);
+    }
   }
   img {
     &:nth-child(3) {
       margin-bottom: 0;
     }
   }
-  .line,
+  .line {
+    width: 50px;
+    height: 1px;
+    background-color: #004da0;
+    margin-right: 20px;
+    @media (max-width: 768px) {
+      width: 25px;
+      margin-right: 10px;
+    }
+    @media (max-width: 576px) {
+      display: none;
+    }
+  }
   .online {
-    display: none;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $color-regular;
+    @media (min-width: 1024px) {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      font-size: 14px;
+      margin-top: 20px;
+    }
   }
 }
 @media (min-width: 1025px) {
@@ -271,54 +327,7 @@
     }
   }
 }
-.nav-social {
-  display: flex;
-  align-items: center;
-  margin: 30px 0;
-  img {
-    margin-right: 30px;
-    transition: all 0.3s;
-    @media (min-width: 769px) {
-      margin-right: 0;
-    }
-    &:hover {
-      transform: scale(1.3);
-    }
-    @media (max-width: 768px) {
-      margin-right: 25px;
-      width: 25px;
-    }
-  }
-  @media (max-width: 576px) {
-    flex-wrap: wrap;
-  }
-  .line {
-    width: 50px;
-    height: 1px;
-    background-color: #004da0;
-    margin-right: 20px;
-    @media (max-width: 768px) {
-      width: 25px;
-      margin-right: 10px;
-    }
-    @media (max-width: 576px) {
-      display: none;
-    }
-  }
-  .online {
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 1;
-    text-transform: uppercase;
-    color: $color-regular;
-    @media (max-width: 768px) {
-      font-size: 14px;
-    }
-    @media (max-width: 576px) {
-      margin-top: 20px;
-    }
-  }
-}
+
 @media (max-width: 1024px) {
   .b-1024 {
     flex-direction: column;
@@ -362,13 +371,13 @@
   .menu-btn {
     display: flex;
     align-items: center;
-    position: fixed;
+    position: absolute;
     top: 42px;
     right: 30px;
     width: 35px;
     height: 8px;
     cursor: pointer;
-    z-index: 1;
+    z-index: 11;
     @media (max-width: 576px) {
       top: 45px;
       right: 20px;
@@ -407,7 +416,7 @@
     background-color: $bg-white;
     transition-duration: 0.6s;
     box-shadow: $shadow;
-    z-index: 1;
+    z-index: 10;
     @media (max-width: 1024px) {
       padding: 30px 0 0 25px;
     }

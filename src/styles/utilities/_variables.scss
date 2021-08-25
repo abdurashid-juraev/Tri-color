@@ -7,78 +7,19 @@ $title-color: #004da0;
   margin: 0 auto;
   padding: 25px 80px;
   @media (max-width: 1024px) {
-    padding: 20px 90px 20px 15px;
+    padding: 20px;
   }
   @media (max-width: 768px) {
-    padding: 20px 115px 20px 15px;
+    padding: 20px;
   }
   @media (max-width: 576px) {
-    padding: 20px 60px 20px 10px;
+    padding: 20px;
   }
 }
 
-//margin-bottom => m-b-10
-$spaceamounts: (
-  0,
-  5,
-  10,
-  15,
-  20,
-  25,
-  30,
-  35,
-  40,
-  45,
-  50,
-  55,
-  60,
-  65,
-  70,
-  75,
-  80,
-  85,
-  90,
-  95,
-  100
-);
-$sides: (bottom, top, left, right);
-@each $space in $spaceamounts {
-  @each $side in $sides {
-    .m-#{str-slice($side, 0, 1)}-#{$space} {
-      margin-#{$side}: #{$space}px !important;
-    }
-  }
-}
-
-//padding-bottom => m-b-10
-$spaceamounts: (
-  0,
-  5,
-  10,
-  15,
-  20,
-  25,
-  30,
-  35,
-  40,
-  45,
-  50,
-  55,
-  60,
-  65,
-  70,
-  75,
-  80,
-  85,
-  90,
-  95,
-  100
-);
-$sides: (bottom, top, left, right);
-@each $space in $spaceamounts {
-  @each $side in $sides {
-    .p-#{str-slice($side, 0, 1)}-#{$space} {
-      padding-#{$side}: #{$space}px !important;
-    }
+.pr0 {
+  padding-right: 0;
+  @media (max-width:576px) {
+    padding-right: 15px;
   }
 }
