@@ -79,6 +79,9 @@
   font-size: 14px;
   line-height: 1;
   color: $color-regular;
+  &:hover {
+    color: $title-color;
+  }
   @media (max-width: 1024px) {
     font-size: 16px;
   }
@@ -262,7 +265,7 @@
       margin-right: 20px;
       margin-bottom: 0;
     }
-    
+
     &:hover {
       transform: scale(1.3);
     }
