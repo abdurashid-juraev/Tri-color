@@ -82,10 +82,10 @@ $("ul.tabsx li").click(function () {
   var activeTab = $(this).attr("rel");
   $("#" + activeTab).fadeIn();
 
-  $("ul.tabsx li").removeClass("active");
+  $("ul.tabsx li").removeClass("activex");
   $(this).addClass("activex");
 
-  $(".tab_drawer_headingx").removeClass("d_active");
+  $(".tab_drawer_headingx").removeClass("d_activex");
   $(".tab_drawer_headingx[rel^='" + activeTabx + "']").addClass("d_activex");
 });
 /* if in drawer mode */
@@ -99,4 +99,30 @@ $(".tab_drawer_headingx").click(function () {
 
   $("ul.tabsx li").removeClass("activex");
   $("ul.tabsx li[rel^='" + d_activeTab + "']").addClass("activex");
+});
+//=============================================================
+// swiper in tab
+new Swiper('.swiper-container2', {
+  loop: true,
+  slideToClickedSlide: true,
+  grabCursor: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 25,
+    },
+  },
 });
