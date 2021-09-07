@@ -1,85 +1,72 @@
-.swiper-container2 {
-  padding: 0 10px 20px 10px;
-  overflow-x: hidden;
-}
-.cards-slider {
-  .swiper-button-next,
-  .swiper-button-prev {
-    top: 60%;
+.mySwiperx {
+  width: 100%;
+  .swiper {
+    width: 100%;
+    height: 100%;
   }
-  .swiper-button-prev,
-  .swiper-container-rtl .swiper-button-next {
-    left: -20px;
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    padding: 5px;
   }
-  .swiper-button-next,
-  .swiper-container-rtl .swiper-button-prev {
-    right: -20px;
-  }
-}
-.swiper-slide {
-  transition: transform 0.25s;
-}
 
-.swiper-slide-active {
-  transform: scale(1);
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 .card-complect {
-  background: #ffffff;
-  border-radius: 5px;
-  margin-top: 10px;
+  width: 100%;
   background: #ffffff;
   box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
-  .block-title {
+  padding: 30px 0 40px 35px;
+  .complect-head {
     display: flex;
-    justify-content: space-between;
-    padding: 30px 0 25px 35px;
-    position: relative;
-  }
-  .card_title {
-    color: $title-color;
-    font-size: 22px;
-    line-height: 1.4;
-    max-width: 210px;
-  }
-  .card-price-wrap {
-    position: absolute;
-    right: 0;
-    top: 35px;
-  }
-  .card-price {
-    display: block;
     margin-bottom: 10px;
+  }
+  .complect-content {
+    padding-right: 40px;
+  }
+  .complect-title {
+    font-size: 20px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    text-align: left;
+    color: $title-color;
+  }
+  .complect-price {
+    background: #e60f2a;
+    border-radius: 2px 0px 0px 2px;
     font-weight: 500;
     font-size: 20px;
     color: #ffffff;
-    padding: 5px 23px;
-    background: #e60f2a;
-    border-radius: 2px 0px 0px 2px;
+    padding: 8px 25px 7px 25px;
+    margin-bottom: 5px;
   }
-  .card-subprice {
-    display: block;
+  .complect-subprice {
     font-size: 16px;
-    text-align: center;
-    color: #888d8f;
+    color: #a7a8a8;
     text-decoration: line-through;
   }
-  .block-content {
-    padding: 0 35px 40px 35px;
-  }
-  .card-list-title {
+  .list-title {
     font-weight: 300;
     font-size: 16px;
-    line-height: 1;
     color: #515b60;
+    text-align-last: left;
     margin-bottom: 10px;
   }
-  .card-list {
-    padding-left: 15px;
+  .list {
+    padding-left: 20px;
+    list-style: unset;
+    text-align-last: left;
     margin-bottom: 20px;
   }
-  .card-list-item {
-    list-style: initial;
+  .list-item {
     font-weight: 300;
     font-size: 16px;
     line-height: 2;
@@ -88,110 +75,129 @@
       color: $title-color;
     }
   }
-  .card-text-title {
+  .complect-info-title {
     font-weight: 300;
     font-size: 16px;
-    color: #515b60;
+    text-align-last: left;
+    color: $light-black;
     margin-bottom: 10px;
   }
-  .card-text {
+  .complect-text {
     font-weight: 300;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.4;
     color: $light-black;
+    text-align: left;
     margin-bottom: 30px;
   }
 }
-.card-btn-wrap {
+.coplect-link-wrap {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-.card-buy-link {
-  font-size: 16px;
+.buy-link {
+  font-size: 14px;
+  text-transform: uppercase;
   color: #ffffff;
-  padding: 12px 42px;
-  background-color: #e60f2a;
+  background: #e60f2a;
   border-radius: 5px;
-  transition: all 0.2s;
+  padding: 18px 45px 15px 45px;
+  transition: all 0.3s;
   &:hover {
+    color: #ffffff;
     background-color: #ff0000;
     box-shadow: 0 0 15px 0 rgba(252, 2, 2, 0.952);
-    color: #ffffff;
   }
 }
-.card-info-link {
-  font-size: 16px;
+.info-link {
+  font-size: 14px;
+  text-transform: uppercase;
   color: $title-color;
-  padding: 12px 42px;
   border: 1px solid #004da0;
   border-radius: 5px;
+  padding: 15px 30px;
   transition: all 0.3s;
   &:hover {
     color: #ff0000;
   }
 }
-.card-buy {
+.card-info {
+  width: 100%;
+  background: #ffffff;
   box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.15);
-  padding: 40px;
-  margin-top: 10px;
-  .card-buy-img {
+  border-radius: 5px;
+  position: relative;
+  .card-antena {
     width: 100%;
-    height: 250px;
-    margin: 25px 0 35px 0;
+    height: 270px;
+    margin-top: 55px;
+    padding: 20px;
     img {
-      width: 100%;
       height: 100%;
       object-fit: contain;
       object-position: center;
     }
   }
-  .card-elements {
+  .card-element {
     position: absolute;
-    top: 35px;
+    top: 30px;
     left: 0;
+    z-index: 1;
   }
-  .red-span {
-    background: #e60f2a;
-  }
-  .blue-span {
-    background: #004da0;
-  }
-  .lightblue-span {
-    background: #00adee;
-  }
-  .red-span,
-  .blue-span,
-  .lightblue-span {
+  .red,
+  .navy,
+  .blue {
     font-size: 14px;
+    width: 120px;
     color: #ffffff;
-    padding: 5px 10px;
-    border-radius: 0px 2px 2px 0px;
-    margin-bottom: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 120px;
+    margin-bottom: 10px;
+    padding: 4px 10px;
+    border-radius: 0px 2px 2px 0px;
+    img {
+      width: 17px;
+      height: 17px;
+    }
   }
-  .card-buy-title {
+  .red {
+    background-color: #e60f2a;
+  }
+  .navy {
+    background-color: #004da0;
+  }
+  .blue {
+    background-color: #00adee;
+  }
+  .card-info-content {
+    padding: 18px 40px 40px 40px;
+    @media (max-width:768px) {
+      padding: 18px 25px 40px 25px;
+    }
+  }
+  .card-info-title {
     font-size: 20px;
+    line-height: 1.2;
+    text-transform: uppercase;
     color: $light-black;
-    margin-bottom: 50px;
+    text-align-last: left;
+    margin-bottom: 20px;
   }
-  .card-buy-prices {
-    margin-bottom: 40px;
+  .card-price-wrap {
+    text-align: left;
+    margin-bottom: 35px;
   }
-  .card-buy-price {
+  .card-info-price {
     font-size: 20px;
     color: rgba(21, 31, 36, 0.51);
     text-decoration: line-through;
-    margin-right: 35px;
+    margin-right: 40px;
   }
-  .card-buy-subprice {
+  .card-info-subprice {
     font-weight: 500;
     font-size: 25px;
-    color: $title-color;
+    color: #004da0;
   }
-}
-.max-height610px {
-  max-height: 610px;
 }

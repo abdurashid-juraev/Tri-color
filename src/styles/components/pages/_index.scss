@@ -164,6 +164,7 @@
     .block-mini-card {
       display: block;
     }
+    padding: 0;
   }
   @media (max-width: 576px) {
     .block-mini-card {
@@ -172,4 +173,4 @@
     }
   }
 }
-@import "../tabSlide";
+@import "../tabContent";

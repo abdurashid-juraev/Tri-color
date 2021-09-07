@@ -32,4 +32,10 @@ $light-black: #263238;
 }
 .mb80 {
   margin-bottom: 80px;
+  @media (max-width:576px) {
+    margin-bottom: 20px;
+  }
+  @media (max-width:1024px) {
+    margin-bottom: 45px;
+  }
 }
